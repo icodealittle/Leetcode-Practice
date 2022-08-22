@@ -1,12 +1,14 @@
 """
 Why does the size change when using a doubly linked list vs a singly linked list?
-"""
+> 2 hours
 
+> Next time recursive
+
+"""
 class SNode:
     def __init__(self, data):
         self.next = None
         self.data = data
-
 
 class SinglyLinkedList:
     def __init__(self):
@@ -35,12 +37,12 @@ class SinglyLinkedList:
         return count
 
 
+
 class DNode:
     def __init__(self, data):
         self.next = None
         self.prev = None
         self.data = data
-
 
 class DoublyLinkedList:
     def __init__(self):
@@ -76,10 +78,10 @@ class DoublyLinkedList:
 
 
 
+
+
 if __name__ == '__main__':
     item = SinglyLinkedList()
     item.add("1")
     item.add("1")
-    print(item.sizeS())
     item.add("1")
-    print(item.sizeS())
