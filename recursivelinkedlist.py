@@ -1,3 +1,4 @@
+# https://medium.com/@hiimdaosui/remove-linked-list-elements-6ec6b7560327
 class RNode:
     def __init__(self, data):
         self.next = None
