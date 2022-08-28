@@ -1,49 +1,82 @@
 class RNode:
     def __init__(self, data):
         self.next = None
-        self.prev = None
+        # self.prev = None
         self.data = data
+        self.next = None
 
 
 class RecursiveLinkedList:
-    def __init__(self):
+    def __init__(self) -> None:
         self.head = None
         self.tail = None
 
-    def add(self, data, flip=True):
-        if flip:
-            if self.head is None:
-                self.head = RNode(data)
-            else:
-                # self.head is not None
-                self.head = self.head.next
-                pcopy = self.head
-                self.head.prev = pcopy
-                return self.add(data, flip)
+    def traverse(self):
+        copy = self.head
+        while copy is not None:
+            print(copy.data)
+            copy = copy.next
+
+    def is_empty(self):
+        return self.size() == 0
+
+    def add(self, item):
+        # Send in new node with data and the head node
+        self.add_recur(RNode(item), self.head)
+
+    def add_recur(self, new_node, curr):
+        if self.is_empty():
+            self.head = new_node
+            return
+
+        elif not curr.next:
+            curr.next = new_node
+            return
+        return self.add_recur(new_node, curr.next)
+
 
     def size(self):
-        if self.head is None:
-            return 0
-        else:
-            self.head = self.head.next
-            return 1 + self.size()
-
-
-    def size_I(self):
-        count = 0
         copy = self.head
-        if self.head is not None:
-            count+=1
+        count = 0
+        while copy is not None:
+            count += 1
+            #print(copy.data)
+            copy = copy.next
         return count
 
-    def i_remove(self):
-        pass
+    def remove(self, key):
+        """
+        @param: key -> the data on the target node
+        """
+        # Go through the list and find the correct node
+        # take a copy of the prev node and next node of the node we remove
+        # set copy.prev == copy.next, target.next, target.prev
+        # return the new list and update head
+        # There needs to be a special case for the head node
+        copy = self.head
+        rest = self.head
+        if copy is not None:
+            if copy.data == key:
+                self.head = copy.next
+        while copy is not None:
+            if copy.data == key:
+                break
+            prev = copy
+            copy = copy.next
+            prev.next = copy.next
+            copy = None
+
+
+
+
 
 
 if __name__ == '__main__':
     item = RecursiveLinkedList()
-    item.add("Hello", True)
-    item.add("Hello1", True)
-    item.add("Hello2", True)
-    print(item.size())
-    #print(item.size_I())
+    print(item.is_empty())
+    item.add("Hello")
+    item.add("Hello1")
+    item.add("Hello2")
+    item.remove("Hello")
+    item.traverse()
+
