@@ -24,10 +24,3 @@ class QueueT:
             if items == key:
                 self.data.remove(key)
 
-
-if __name__ == '__main__':
-    item = QueueT()
-    item.enque("BOB")
-    item.enque("MARLEY")
-    item.remove("BOB")
-    print(item.size())
