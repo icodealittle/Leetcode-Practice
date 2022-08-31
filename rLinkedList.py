@@ -20,9 +20,8 @@ class RLinkedList:
         copy = self.head
         count = 0
         
-        while(copy):
+        while copy is not None:
             count += 1
-            print(copy.data)
             copy = copy.next
         return count
     
