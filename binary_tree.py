@@ -93,6 +93,21 @@ class BinaryTree:
         pass
 
 
+    # def travers_re(seft):
+        
+    #     self.traverOder
+
+    def traverOder(self):
+        
+        #left -> root -> right
+        lst = []
+        copy = self.root
+        
+        if copy is not None:
+            lst = self.traverOder(copy.left)
+            lst.append(copy.data)
+            lst = lst + self.traverOder(copy.right)
+        return lst
 
 if __name__ == '__main__':
     item = BinaryTree()
@@ -103,3 +118,4 @@ if __name__ == '__main__':
     item.it_insert(2)
     item.it_insert(3)
     print(item.root)
+    print(item.traverOder())
