@@ -1,0 +1,17 @@
+check for the parent node value
+
+if data:
+    if data is less then node data:
+        if left child is none:
+            left child is equal to Node(data)
+        else:
+            insert left child
+    else if data greater than node data:
+        if right child is none:
+            right child is equal to Node(data)
+        else:
+            insert right child
+else:
+    data is equal to data
+
+
