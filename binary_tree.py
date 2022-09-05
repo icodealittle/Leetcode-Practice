@@ -1,3 +1,5 @@
+from generic_stackandqueue import Stack
+
 class TreeNode:
     def __init__(self, data):
         self.right = None
@@ -10,18 +12,13 @@ class BinaryTree:
         self.root = None
 
     def traverse(self):
-        copy = self.root
-        lst = []
-        stop = True
-        while stop:
-            if copy is not None:
-                lst.append(copy.data)
-            if copy.left is not None:
-                lst.append(copy.left.data)
-                copy = copy.left
-            if copy.right is not None:
-                lst.append(copy.right.data)
-                copy = copy.left
+        pass
+    def iterative_traverse(self):
+        """
+        Go all the way left until, node.left == null
+        Uses a stack
+        """
+        pass
 
 
     def insert(self, data):
@@ -94,7 +91,11 @@ class BinaryTree:
 
 
 
+
+
+
 if __name__ == '__main__':
+    s = Stack()
     item = BinaryTree()
     #item.insert(1)
     #item.insert(2)
