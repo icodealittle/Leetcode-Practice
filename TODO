@@ -13,58 +13,90 @@ Wednesday: 9AM--->10:30AM
 
 Friday 9AM
 1 PM Sundays
-> Binary Search
-> Binary Trees **** traverse
+> Binary Search ***
+> Binary Trees **** traverse***
 
-Monday
+***********************************DONE ^^^
+
+Friday 9AM-10:30AM
 > Prefix Trie
-> Binary Tries
 
-Wed
-> Binary Heaps--> Min and max heaps
+Sunday: Review- Sorted Linked Lists, Queue, Stacks, BST
 
-
-Friday
-> Graphs
-> Hashmaps
-
-Sunday
-> Minimum Spanning Tree
-> Symbol Tables
-> AVL Trees
-
-Monday
-> Search and Sorting algorithms
-> Time complexity
+Monday:
+Prefix Tries
 
 Wednesday
-Regular expressions
-Dynamic Programming
+> Binary Tries
+> Binary search - find
 
 Friday:
-System Design
+> Binary Heaps--> Min and max heaps
+> Priority Queues
 
 
-Sunday
-Multithreading
-threads
-async
+Sunday Review: Heaps, Tries, BST
 
 Monday
+> Graphs
+
+
+Wednesday:
+> Hashmaps and Symbol Tables
+
+Friday:
+> Search and Sorting algorithms
+
+Sunday:
+> Time complexity
+
+Monday:
+Hashmaps
+Searching and Sorting
+Graphs
+
+Wednesday:
+Searching and Sorting Algos
+
+Friday:
 Dijkstra's Algorithm
 Bellman-Ford Algorithm
+Floyd-Warshall Algorithm
 BFS/DFS
+
+Sunday: Practice
+Dijkstra's Algorithm
+Floyd-Warshall Algorithm
+Bellman-Ford Algorithm
+BFS/DFS--Sink/Swim
+
+
+Monday:
+Leetcode easy- LinkedLists
+
+
+
 
 
 Wednesday
-Floyd-Warshall Algorithm
-B Trees
+Leetcode easy- Stacks and Queues
 
 
-Friday
+Sunday Review
+Dynamic Programming
+System Design
 P, NP, and NP-Complete: P, NP, and NP-Complete refer to classes of problems
-Bipartite Graph
 
+
+Extra:
+> Minimum Spanning Tree
+> AVL Trees
+> B Trees
+> Regular expressions - https://regex101.com/
+> Bipartite Graph
+> Multithreading
+> threads
+> async
 
 
 

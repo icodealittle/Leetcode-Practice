@@ -35,44 +35,6 @@ class BinaryTree:
     def __init__(self):
         self.root = None
 
-    '''
-    def traverse(self):
-        """
-        1.1 Create an empty stack
-        1 Do following while root is not NULL
-        a) Push root's right child and then root to stack.
-        b) Set root as root's left child.
-        2 Pop an item from stack and set it as root.
-        a) If the popped item has a right child and the right child
-        is at top of stack, then remove the right child from stack,
-        push the root back and set root as root's right child.
-        b) Else print root's data and set root as NULL.
-        3 Repeat steps 2.1 and 2.2 while stack is not empty.
-        """
-        copy = self.root
-        stack = Stack() # Create an empty stack
-        # Go all the way left until node.left is None
-        while copy is not None: #  Do following while root is not NULL
-            # Push root's right child and then root to stack.
-            if copy.right is not None:
-                stack.push(copy.right)
-                stack.push(copy)
-                # Set root as root's left child.
-                copy = copy.left
-                
-
-
-            stack.push(copy)
-            if copy.left is not None:
-                copy = copy.left
-            elif copy.left is None:
-                if copy.right is not None:
-                    copy = copy.right
-                else:
-
-        print(stack)
-        '''
-
     def traverse(self):
         """
         1) Create an empty stack S.
@@ -166,7 +128,7 @@ class BinaryTree:
 
     #     self.traverOder
 
-    def traverOder(self):
+    def recursive_traverse(self):
         """
         Algorithm Inorder(tree)
         1. Traverse the left subtree, i.e., call Inorder(left-subtree)
@@ -187,6 +149,56 @@ class BinaryTree:
         return res
 
 
+def it_binary_search(arr, key):
+    """
+    Binary Search Algorithm: The basic steps to perform Binary Search are:
+    Begin with the mid element of the whole array as a search key.
+    If the value of the search key is equal to the item then return an index of the search key.
+    Or if the value of the search key is less than the item in the middle of the interval,
+    narrow the interval to the lower half. Otherwise, narrow it to the upper half.
+    Repeatedly check from the second point until the value is found or the interval is empty.
+
+    1. Assumes array is sorted
+    2.
+    return: point where key is found in arr
+    """
+    start = 0
+    arr = sorted(arr)
+    end = len(arr)
+    while True:
+        mid = start + end // 2
+        if arr[mid] == key:
+            return mid
+        if key < arr[mid]:
+            end = mid
+        elif key > arr[mid]:
+            start = mid
+        else:
+            return -1
+
+
+def binary_search(arr, key):
+    first_start = 0
+    first_end = len(arr)
+    first_mid = first_start + first_end // 2
+
+    def rec_binary_search(start, end, mid, key, arr):
+        if start > end:
+            return -1
+        if arr[mid] == key:
+            return mid
+        if key < arr[mid]:
+            end = mid
+            mid = start + end // 2
+            return rec_binary_search(start, end, mid, key, arr)
+        elif key > arr[mid]:
+            start = mid
+            mid = start + end // 2
+            return rec_binary_search(start, end, mid, key, arr)
+
+    return rec_binary_search(first_start, first_end, first_mid, key, arr)
+
+
 if __name__ == '__main__':
     item = BinaryTree()
     # item.insert(1)
@@ -195,6 +207,6 @@ if __name__ == '__main__':
     item.it_insert(1)
     item.it_insert(2)
     item.it_insert(3)
-    #item.traverOder()
+    # item.traverOder()
     # print(item.root)
-    print(item.traverOder())
+    print(binary_search([1, 2, 3, 4, 5, 6, 7, 8], 3))
