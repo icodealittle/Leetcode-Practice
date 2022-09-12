@@ -35,9 +35,9 @@ class SortedLL:
                     if copy.next.data < new_node.data:
                         copy = copy.next
                     elif copy.next.data > new_node.data:
-                        # We know that copy.prev is less than
+                        # We know that copy.next is greater than
                         # Put it between copy and copy.next
-                        # [2, 7 None]
+                        # [2, 5 7 None] >5
                         if copy.next.next is None:
                             save = copy.next
                             copy.next = new_node
@@ -86,7 +86,7 @@ class SortedLL:
                 copy.next = new_node
                 copy.next.next = save
             else:
-                console.log("print")
+                console.log("ERROR")
 
 
     def add2(self, data):
@@ -146,6 +146,7 @@ if __name__ == '__main__':
     item.add(3)
     item.add(4)
     item.add(7)
+    item.add(3)
     '''
     item.add2(1)
     item.add2(3)
