@@ -199,14 +199,23 @@ def binary_search(arr, key):
     return rec_binary_search(first_start, first_end, first_mid, key, arr)
 
 
+def bobbleSort(arr):
+    for i in range(len(arr)):
+        for j in range(0, len(arr) - i - 1):
+            if arr[j] > arr[j + 1]:
+                temp_node = arr[j]
+                arr[j] = arr[j + 1]
+                arr[j + 1] = temp_node
+
+
 if __name__ == '__main__':
     item = BinaryTree()
-    # item.insert(1)
-    # item.insert(2)
-    # item.insert(3)
-    item.it_insert(1)
-    item.it_insert(2)
-    item.it_insert(3)
-    # item.traverOder()
-    # print(item.root)
-    print(binary_search([1, 2, 3, 4, 5, 6, 7, 8], 3))
+    # # item.insert(1)
+    # # item.insert(2)
+    # # item.insert(3)
+    # item.it_insert(1)
+    # item.it_insert(2)
+    # item.it_insert(3)
+    # # item.traverOder()
+    # # print(item.root)
+    item = [1, 2, 3, 4, 5, 6, 7, 8]
