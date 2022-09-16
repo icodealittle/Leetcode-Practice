@@ -21,14 +21,17 @@ Friday 9AM
 Friday 9AM-10:30AM
 > Prefix Trie
 
-Sunday: Review- Sorted Linked Lists, Queue, Stacks, BST
+Sunday: Review- Sorted Linked Lists ***, Queue, Stacks, BST
+
 
 Monday:
-Prefix Tries
-
-Wednesday
-> Binary Tries
 > Binary search - find
+> Priority Queues
+
+Wednesday:
+> Prefix Tries
+> Binary Tries
+> https://www.geeksforgeeks.org/hash-map-in-python/
 
 Friday:
 > Binary Heaps--> Min and max heaps
